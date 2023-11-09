@@ -1,0 +1,16 @@
+spring:
+  config:
+    import: classpath:secrets.yml
+
+server:
+  servlet:
+    context-path: /api
+  port: 5000
+
+app:
+  #DataSource Configuration
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5432/petsystem
+    username: ${database-config.username-database}
+    password: secret
+    pool-size: 30
