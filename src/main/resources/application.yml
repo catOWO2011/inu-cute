@@ -10,7 +10,7 @@ server:
 app:
   #DataSource Configuration
   datasource:
-    jdbc-url: jdbc:postgresql://localhost:5432/petsystem
+    jdbc-url: jdbc:postgresql://${database-config.url-database}/petsystem
     username: ${database-config.username-database}
-    password: secret
+    password: ${database-config.password-database}
     pool-size: 30
