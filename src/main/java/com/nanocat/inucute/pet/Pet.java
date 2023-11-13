@@ -7,13 +7,13 @@ public class Pet {
   private final UUID petId;
   private final String name;
   private final LocalDate birthDate;
-  private PetType petType;
+  private final UUID typeId;
 
-  public Pet(UUID petId, String name, LocalDate birthDate, PetType petType) {
+  public Pet(UUID petId, String name, LocalDate birthDate, UUID typeId) {
     this.petId = petId;
     this.name = name;
     this.birthDate = birthDate;
-    this.petType = petType;
+    this.typeId = typeId;
   }
 
   public UUID getPetId() {
@@ -28,8 +28,8 @@ public class Pet {
     return birthDate;
   }
 
-  public PetType getPetType() {
-    return petType;
+  public UUID getTypeId() {
+    return typeId;
   }
 
   @Override
@@ -38,7 +38,7 @@ public class Pet {
             "petId=" + petId +
             ", name='" + name + '\'' +
             ", birthDate=" + birthDate +
-            ", petType=" + petType +
+            ", typeId=" + typeId +
             '}';
   }
 }
